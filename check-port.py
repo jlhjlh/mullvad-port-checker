@@ -5,8 +5,8 @@ import subprocess
 from dotenv import load_dotenv
 import requests
 
-
-# docker exec qbittorrent curl -s https://am.i.mullvad.net/port/56812
+# set up in crontab
+# /home/USER/mullvad-port-checker/venv/bin/python3 /home/USER/mullvad-port-checker/check-port.py >> output.log
 
 ###############################################
 # initialize vars and get the script rolling!
