@@ -24,12 +24,13 @@ result = subprocess.run(
     shell=True,
     stdout=subprocess.PIPE,
 )
+
 mullvad_response = json.loads(result.stdout)
 print(mullvad_response)
 
 if mullvad_response["reachable"] == False:
     print(f"Mullvad port {PORT} is closed.")
-    
+
     url = "https://api.pushover.net/1/messages.json"
     params = {
         "token": PUSHOVER_API_TOKEN,
